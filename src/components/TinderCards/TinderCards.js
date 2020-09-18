@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./TinderCards.css";
 
 // import axios from "./axios";
-import { db, auth } from "./firebase";
+import { db, auth } from "../../firebase";
 
 import TinderCard from "react-tinder-card";
 import Moment from "react-moment";
