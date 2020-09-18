@@ -28,15 +28,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - React Router
 
-- React
-
-- Stripe (payment)
+- React Context
 
 - Firebase (storage and database)
-
-- Axios
-
-- Express server
 
 ## Test cards
 
