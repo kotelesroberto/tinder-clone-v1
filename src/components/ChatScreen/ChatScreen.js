@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./ChatScreen.css";
 
 import Avatar from "@material-ui/core/Avatar";
+import SendIcon from "@material-ui/icons/Send";
+
+import { animateScroll } from "react-scroll";
 
 const ChatScreen = () => {
   // type message into input
@@ -28,10 +31,29 @@ const ChatScreen = () => {
 
   const hadleSend = (e) => {
     e.preventDefault();
+    if (!input) return;
+
+    setMessages([
+      ...messages,
+      {
+        message: input,
+      },
+    ]);
+
+    setInput("");
+    scrollToBottom();
+  };
+
+  const scrollToBottom = () => {
+    setTimeout(() => {
+      animateScroll.scrollToBottom({
+        containerId: "chatScreen",
+      });
+    }, 200);
   };
 
   return (
-    <div className="chatScreen">
+    <div className="chatScreen" id="chatScreen">
       <p className="chatScreen__title">You matched with May on 13/03/20</p>
 
       {messages.map((message) => (
@@ -60,9 +82,14 @@ const ChatScreen = () => {
             className="chatScreen__inputField"
             placeholder="Type a message..."
             onChange={(e) => setInput(e.target.value)}
+            value={input}
           />
-          <button className="chatScreen__inputButton" onClick={hadleSend}>
-            Send
+          <button
+            className="chatScreen__inputButton"
+            onClick={hadleSend}
+            disabled={input?.length ? false : true}
+          >
+            <SendIcon />
           </button>
         </form>
       </div>

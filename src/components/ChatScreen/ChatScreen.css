@@ -1,4 +1,7 @@
 .chatScreen {
+  flex: 1;
+  overflow: auto;
+  max-height: calc(100vh - 100px - 46px);
 }
 
 .chatScreen__title {
@@ -32,23 +35,27 @@
 /* Type a message */
 .chatScreen__input {
   width: 100%;
+  height: 46px;
   display: flex;
   padding: 5px;
   position: fixed;
   bottom: 0;
   border-top: 1px solid lightgray;
+  color: #d0d0d0;
+  background-color: #fff;
 }
 
 .chatScreen__inputField {
   flex: 1;
   padding: 10px;
-  border: none;
+  border: lightgray;
+  background-color: #fffeff;
+  outline: none;
 }
 
 .chatScreen__inputField:focus,
 .chatScreen__inputField:active {
-  border: none;
-  user-select: none;
+  outline: none;
 }
 
 .chatScreen__inputButton {
@@ -56,6 +63,18 @@
   margin-right: 20px;
   background-color: #fff;
   font-weight: 700;
-  color: #fe3d71;
+  /* color: #fe3d71; */
+  color: #62b4f9;
   cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: 10;
+  height: 100%;
+  padding: 15px;
+  outline: none;
+  transform: translateY(-50%);
+}
+.chatScreen__inputButton:disabled {
+  color: #d0d0d0;
 }
