@@ -2,6 +2,9 @@
   "folders": [
     {
       "path": "."
+    },
+    {
+      "path": "../tinder-clone-v1-firebase-import"
     }
   ],
   "settings": {}

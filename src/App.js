@@ -5,6 +5,7 @@ import "./App.css";
 
 import Header from "./Header";
 import TinderCards from "./TinderCards";
+import SwipeButttons from "./SwipeButttons";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           </Route>
         </Switch>
 
-        {/* Buttons */}
+        <SwipeButttons />
 
         {/* Chats */}
         {/* Individual Chat screen */}

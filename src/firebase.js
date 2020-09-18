@@ -16,7 +16,7 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 // initialize the database (Cloud Firestore))
 const db = firebaseApp.firestore();
 
-// initialize the authentication (Authentication)
+// initialize the authentication ()
 const auth = firebaseApp.auth();
 
 export { db, auth };
