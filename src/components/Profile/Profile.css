@@ -8,6 +8,11 @@
   flex-direction: column;
   align-items: center;
   background-color: #fff;
+  padding: 20px;
+}
+
+.profile__details > h1 {
+  font-size: 1.6rem;
 }
 
 .profile__details > h1,
@@ -25,16 +30,16 @@
   object-fit: contain;
 }
 
-.profile_options {
+.profile__options {
   background-color: #f5f6fa;
   position: relative;
   overflow: hidden;
-  padding: 30px;
+  padding: 10vh 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.profile_options:before {
+.profile__options:before {
   content: "";
   display: block;
   width: 200vw;
@@ -47,4 +52,39 @@
   border-radius: 300%;
   /* border: 2px solid grey; */
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.profile__options .MuiIconButton-root {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.profile__iconButton {
+  z-index: 10;
+  text-align: center;
+}
+
+.profile__iconButton .MuiSvgIcon-root {
+  color: #c2c8ce;
+}
+
+.profile__iconButton.highlight {
+  transform: translateY(20px);
+}
+
+.profile__iconButton.highlight .MuiSvgIcon-root {
+  width: 2em;
+  height: 2em;
+  color: #fff;
+}
+.profile__iconButton.highlight .MuiIconButton-root {
+  background-color: #fc9842;
+  background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+}
+
+.profile__buttonLabel {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #c2c8ce;
+  font-weight: 500;
+  padding: 10px 5px;
 }

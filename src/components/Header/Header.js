@@ -20,11 +20,16 @@ const Header = ({ backButton }) => {
         </IconButton>
       ) : (
         <Link to="/">
-          <img
-            src="https://1000logos.net/wp-content/uploads/2018/07/tinder-logo.png"
-            alt="Tinder"
-            className="header__logo"
-          />
+          <IconButton
+            aria-label="back"
+            onClick={() => history.replace(backButton)}
+          >
+            <img
+              src="assets/tinder-logo.svg"
+              alt="Tinder"
+              className="header__logo"
+            />
+          </IconButton>
         </Link>
       )}
 

@@ -59,6 +59,7 @@ const Matches = () => {
               alt={match.name}
               src={match.profilePics}
             />
+
             <p className="matches__name">{match.name}</p>
           </div>
         ))}

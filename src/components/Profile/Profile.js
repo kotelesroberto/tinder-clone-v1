@@ -33,25 +33,36 @@ const Profile = () => {
         <p>{profile.education}</p>
       </div>
 
-      <div className="profile_options">
-        <IconButton
-          aria-label="back"
-          // onClick={() => history.replace(backButton)}
-        >
-          <SettingsIcon />
-        </IconButton>
-        <IconButton
-          aria-label="back"
-          // onClick={() => history.replace(backButton)}
-        >
-          <CameraAltIcon />
-        </IconButton>
-        <IconButton
-          aria-label="back"
-          // onClick={() => history.replace(backButton)}
-        >
-          <AssignmentTurnedInIcon />
-        </IconButton>
+      <div className="profile__options">
+        <div className="profile__iconButton">
+          <IconButton
+            aria-label="back"
+            // onClick={() => history.replace(backButton)}
+          >
+            <SettingsIcon />
+          </IconButton>
+          <p className="profile__buttonLabel">Settings</p>
+        </div>
+
+        <div className="profile__iconButton highlight">
+          <IconButton
+            aria-label="back"
+            // onClick={() => history.replace(backButton)}
+          >
+            <CameraAltIcon />
+          </IconButton>
+          <p className="profile__buttonLabel">Add media</p>
+        </div>
+
+        <div className="profile__iconButton">
+          <IconButton
+            aria-label="back"
+            // onClick={() => history.replace(backButton)}
+          >
+            <AssignmentTurnedInIcon />
+          </IconButton>
+          <p className="profile__buttonLabel">Safety</p>
+        </div>
       </div>
     </div>
   );

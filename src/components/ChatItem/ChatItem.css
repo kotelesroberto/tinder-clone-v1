@@ -27,6 +27,7 @@
   flex: 1;
 }
 .chatItem__details > h2 {
+  font-size: 1.2rem;
 }
 .chatItem__details > p {
   color: gray;
