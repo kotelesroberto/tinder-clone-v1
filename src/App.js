@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import TinderCards from "./components/TinderCards/TinderCards";
 import SwipeButtons from "./components/SwipeButtons/SwipeButtons";
 import Chats from "./components/Chats/Chats";
+import Profile from "./components/Profile/Profile";
 import ChatScreen from "./components/ChatScreen/ChatScreen";
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
           <Route path="/chat">
             <Header backButton="/" />
             <Chats />
+          </Route>
+          <Route path="/profile">
+            <Header />
+            <Profile />
           </Route>
           <Route path="/">
             <Header />

@@ -19,22 +19,24 @@ const Header = ({ backButton }) => {
           <ArrowBackIosIcon fontSize="large" className="header__icon" />
         </IconButton>
       ) : (
-        <IconButton aria-label="profile">
-          <PersonIcon fontSize="large" className="header__icon" />
-        </IconButton>
+        <Link to="/">
+          <img
+            src="https://1000logos.net/wp-content/uploads/2018/07/tinder-logo.png"
+            alt="Tinder"
+            className="header__logo"
+          />
+        </Link>
       )}
-
-      <Link to="/">
-        <img
-          src="https://1000logos.net/wp-content/uploads/2018/07/tinder-logo.png"
-          alt="Tinder"
-          className="header__logo"
-        />
-      </Link>
 
       <Link to="/chat">
         <IconButton aria-label="chats">
           <QuestionAnswerIcon fontSize="large" className="header__icon" />
+        </IconButton>
+      </Link>
+
+      <Link to="/profile">
+        <IconButton aria-label="profile">
+          <PersonIcon fontSize="large" className="header__icon" />
         </IconButton>
       </Link>
     </div>

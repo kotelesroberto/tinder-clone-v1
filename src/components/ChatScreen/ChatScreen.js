@@ -75,7 +75,7 @@ const ChatScreen = () => {
         </div>
       ))}
 
-      <div>
+      <div className="chatScreen__inputContainer">
         <form action="" className="chatScreen__input">
           <input
             type="text"

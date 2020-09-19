@@ -15,7 +15,7 @@
     "react-moment": "^0.9.7",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "react-scroll-to-bottom": "^4.0.0",
+    "react-scroll": "^1.8.1",
     "react-tinder-card": "^1.2.1"
   },
   "scripts": {

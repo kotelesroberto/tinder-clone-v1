@@ -13,7 +13,7 @@
 .chatScreen__message {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 5px 20px;
 }
 
 .chatScreen__image {
@@ -22,18 +22,21 @@
 .chatScreen__text {
   margin-left: 10px;
   background-color: lightgray;
-  padding: 15px;
-  border-radius: 20px;
+  padding: 10px 15px;
+  border-radius: 15px 15px 15px 5px;
+  position: relative;
+  max-width: 70vw;
 }
 
 .chatScreen__text.me {
   margin-left: auto;
   background-color: #29b3cd;
   color: #fff;
+  border-radius: 15px 15px 5px 15px;
 }
 
 /* Type a message */
-.chatScreen__input {
+.chatScreen__inputContainer {
   width: 100%;
   height: 46px;
   display: flex;
@@ -44,13 +47,23 @@
   color: #d0d0d0;
   background-color: #fff;
 }
+.chatScreen__input {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
 .chatScreen__inputField {
   flex: 1;
   padding: 10px;
-  border: lightgray;
+  border: 1px solid lightgray;
   background-color: #fffeff;
   outline: none;
+  border-radius: 25px;
 }
 
 .chatScreen__inputField:focus,
@@ -60,20 +73,18 @@
 
 .chatScreen__inputButton {
   border: none;
-  margin-right: 20px;
-  background-color: #fff;
+  background-color: transparent;
   font-weight: 700;
   /* color: #fe3d71; */
   color: #62b4f9;
   cursor: pointer;
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 0;
   z-index: 10;
   height: 100%;
-  padding: 15px;
+  padding: 0 15px;
   outline: none;
-  transform: translateY(-50%);
 }
 .chatScreen__inputButton:disabled {
   color: #d0d0d0;
