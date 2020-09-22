@@ -37,11 +37,11 @@ const TinderCards = () => {
   }, []); // loads when component loads AND people changes
 
   const swiped = (direction, nameToDelete) => {
-    console.log("removing: " + nameToDelete);
+    console.log(`${nameToDelete} swiped to ${direction}`);
     // setLastDirection(direction);
   };
-  const onCardLeftScreen = (name) => {
-    console.log(name + " left the screen");
+  const onCardLeftScreen = (dir, name) => {
+    console.log(`${name} left the screen on ${dir}`);
   };
 
   const timeNow = Date.now();
@@ -57,8 +57,9 @@ const TinderCards = () => {
             // key={person.name}
             key={person.name}
             onSwipe={(dir) => swiped(dir, person.name)}
-            onCardLeftScreen={() => onCardLeftScreen(person.name)}
+            onCardLeftScreen={(dir) => onCardLeftScreen(dir, person.name)}
             preventSwipe={["down"]}
+            flickOnSwipe={true}
           >
             <div
               style={{ backgroundImage: `url(${person.imgUrl})` }}
